@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/searchbar.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -29,16 +31,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Image Finder'),
-      ),
-      body: Center(
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        padding: EdgeInsets.only(top: 20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
+            SearchBar(),
           ],
         ),
       ),
