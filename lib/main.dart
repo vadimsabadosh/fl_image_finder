@@ -101,15 +101,27 @@ class _MyHomePageState extends State<MyHomePage> {
             SearchBar(onSubmit: handleSubmit),
             if (images.isNotEmpty) ...[
               ImageGallery(
-                listController: _controller,
-                images: images,
-              ),
+                  listController: _controller,
+                  images: images,
+                  openModal: _dialogBuilder),
               if (showBtn && !isLoading) Button(loadMore: loadMore),
               if (isLoading) const Loader(),
             ],
           ],
         ),
       ),
+    );
+  }
+
+  Future<void> _dialogBuilder(String image) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.zero,
+          content: Image.network(image, fit: BoxFit.cover),
+        );
+      },
     );
   }
 }

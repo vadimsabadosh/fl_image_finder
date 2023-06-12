@@ -5,12 +5,13 @@ import 'image_gallery_item.dart';
 
 class ImageGallery extends StatelessWidget {
   final ScrollController listController;
-
+  final Function(String image) openModal;
   final List<ImageModel> images;
   const ImageGallery({
     Key? key,
     required this.listController,
     required this.images,
+    required this.openModal,
   }) : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class ImageGallery extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           itemCount: images.length,
           itemBuilder: (BuildContext ctx, index) {
-            return ImageGalleryItem(image: images[index]);
+            return ImageGalleryItem(image: images[index], openModal: openModal);
           }),
     );
   }
