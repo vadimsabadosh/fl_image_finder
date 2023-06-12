@@ -1,16 +1,24 @@
-# fl_image_finder
+# Image Finder
 
-A new Flutter project.
+Simple application with image searching functionality (Pixabay API).
 
-## Getting Started
+![Screenshot](Preview.png)
+![Screenshot](Preview_2.png)
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+Navigate to your project folder and run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```sh
+flutter pub get
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Architecture project
+
+`models` - Folder that includes all data models. <br/>
+`service` - Includes all api requests. <br/>
+`widgets` - This directory contains all the basic building blocks for your app. For example a button or a headline widget. <br/>
+
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+[Flutter]: https://flutter.dev/
+[Pixabay]: https://pixabay.com/api/docs/
